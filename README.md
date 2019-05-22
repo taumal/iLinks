@@ -4,19 +4,6 @@ It's a php crud project to track your browsing site links. Using it you can save
 # How to connect
 You can connect to your database following steps
 
-go to DbInfo.php file into conroller directory then edit
-
-
-         return $config = [
-             'host' => 'localhost',
-             'user' => 'your_username',
-             'password' => 'your_password',
-             'database' => 'iLinks',
-             'charset' => 'utf8',
-             'collation' => 'utf8_unicode_ci',
-             'prefix' => '',
-         ];
-
 
 # Features
 * Mobile responsive.
