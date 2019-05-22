@@ -1,0 +1,30 @@
+.btn , .form-control , .panel, .panel-heading {
+    border-radius: 0;
+}
+.login-panel {
+    margin-top: 10%;
+}
+.page-header {
+    border-bottom: 1px solid #337ab7;
+}
+.select2-container--default .select2-selection--multiple, .select2-container--open .select2-dropdown--above {
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 1px solid #66afe9;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #337ab7;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: rgb(88,151,251);
+    border: 1px solid #66afe9;
+    border-radius: 0;
+    color: white;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: white;
+}

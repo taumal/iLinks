@@ -1,0 +1,1 @@
+[12-Oct-2017 12:06:38 Asia/Dhaka] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'regUsers'@'localhost' (using password: YES) in /home/huntever/apps.huntever.com/iLinks-master/controller/DbController.php on line 68
