@@ -9,15 +9,24 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/metisMenu.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/timeline.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dataTables/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dataTables/dataTables.responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/startmin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/morris.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
     <div id="app">
@@ -76,5 +85,35 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}" defer></script>
+    <script src="{{ asset('js/select2.min.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('js/metisMenu.min.js') }}" defer></script>
+    <script src="{{ asset('js/dataTables/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('js/dataTables/dataTables.bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('js/startmin.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".alert-success").fadeIn(6000, 500).delay(3000).slideUp(900, function() {
+                $(this).remove();
+            });
+            $('#tbl-iLinks').DataTable({
+                columnDefs: [{
+                    targets: [ 0 ],
+                    orderData: [ 0, 1 ]
+                }],
+                responsive: true,
+                stateSave: true
+            });
+            $('.tags').select2({
+                tags: true,
+                tokenSeparators: [',', ' ']
+            });
+        });
+    </script>
 </body>
 </html>

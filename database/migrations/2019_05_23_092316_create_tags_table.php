@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLinksTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,12 @@ class CreateLinksTable extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('topics_name');
-            $table->string('link');
-            $table->string('tags');
-            $table->integer('status');
-            $table->integer('add_to_fav');
-            $table->unsignedInteger('created_by');
-
+            $table->string('tag_name');
             $table->timestamps();
         });
     }
-    
-    
 
     /**
      * Reverse the migrations.
@@ -35,6 +27,6 @@ class CreateLinksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('tags');
     }
 }
