@@ -55,7 +55,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" required autocomplete="current-password">
                             </div>
                             <button type="submit" class="btn btn-lg btn-primary btn-block">
                                 {{ __('Login') }}
